@@ -6,14 +6,18 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="shortcut icon" href="images/icons8.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            background: url(images/bg-image.jpg) no-repeat;
+            background: url(images/bg-snow.jpg) no-repeat;
             background-size: cover;
             height: 100vh;
+        }
+
+        .blackandwhite {
+            color: black;
         }
     </style>
 </head>
@@ -22,17 +26,18 @@
     <div class="container">
         <form class="col-md-6 m-auto py-5">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Enter a location for Weather ...">
+                <input id="input-city" type="text" class="form-control" placeholder="Enter a location for Weather ...">
                 <div class="input-group-append">
-                    <button type="button" class="btn btn-danger">Search</button>
+                    <button id="search-btn" type="button" class="btn btn-danger">Search</button>
                 </div>
             </div>
         </form>
         <div class="weather-status text-white text-center">
-            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
-            <h1>Dhaka</h1>
-            <h3><span>38.06</span>&deg;C</h3>
-            <h1 class="lead">Clouds</h1>
+            <img id="icon" alt="">
+            <h1 class="blackandwhite" id="display-city">Chittagong</h1>
+            <h3 class="blackandwhite"><span class="blackandwhite" id="show-temp"></span>&deg;C</h3>
+            <h4 class="blackandwhite" id="weather-status" class="lead">Thada Mara Roid</h4>
+            <h4><span class="blackandwhite" id="feels-like" class="lead">aikhne te ki eshese</span></h4>
         </div>
     </div>
     <script src="app.js"></script>
